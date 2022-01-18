@@ -1,0 +1,21 @@
+
+<!-- Challenge 3 and 4 -->
+<%- include("partials/header") -%>
+
+<!-- Challenge 1 and 2-->
+<h1>Home</h1>
+<p> <%= content %> </p>
+
+<!-- Challenge 12, 13 and 14 -->
+
+<% composeContent.forEach(post => { %>
+    
+    <h1> <%= post.title %> </h1>
+    <p>
+        <%= post.content.substring(0,100) + "..." %>
+        <a href="/posts/<%=post.title%>">Read More</a>
+    </p>
+<% }); %>
+
+<!-- Challenge 3-->
+<%- include("partials/footer") -%>
